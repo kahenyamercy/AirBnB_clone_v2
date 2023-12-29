@@ -77,3 +77,7 @@ class FileStorage:
     def is_subscriptable(self, obj):
         """Checks whether a dict is subscriptable"""
         return isinstance(obj, Mapping)
+
+    def close(self):
+        """calls reload for deserialising the JSON file to objects"""
+        self.reload()
